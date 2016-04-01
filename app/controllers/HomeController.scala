@@ -19,7 +19,10 @@ class HomeController @Inject() extends Controller {
     * a path of `/`.
     */
   def index = Action {
-    Ok(Json.obj("payload" -> ""))
+    /*
+    simply sending back the timestamp as we see it on our end
+     */
+    Ok(Json.obj("ts" -> System.currentTimeMillis()))
   }
 
 }
